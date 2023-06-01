@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/booking-kculturepass-pub/static/css/main.68e1dbd1.css",
+    "main.js": "/booking-kculturepass-pub/static/js/main.46b12135.js",
+    "static/js/787.7d27ff54.chunk.js": "/booking-kculturepass-pub/static/js/787.7d27ff54.chunk.js",
+    "static/media/eventdetail@3x.png": "/booking-kculturepass-pub/static/media/eventdetail@3x.68c11b000438866cba34.png",
+    "static/media/eventexhibitionexperience@3x.png": "/booking-kculturepass-pub/static/media/eventexhibitionexperience@3x.269761c81b659339e6bf.png",
+    "static/media/eventfestival@3x.png": "/booking-kculturepass-pub/static/media/eventfestival@3x.2fd5ef32241a19b4bdd7.png",
+    "static/media/eventconcert@3x.png": "/booking-kculturepass-pub/static/media/eventconcert@3x.5fbe1fc4367f7e31f8a9.png",
+    "static/media/image14@3x.png": "/booking-kculturepass-pub/static/media/image14@3x.2c83ddf3e6a3ad1d2fdb.png",
+    "index.html": "/booking-kculturepass-pub/index.html",
+    "main.68e1dbd1.css.map": "/booking-kculturepass-pub/static/css/main.68e1dbd1.css.map",
+    "main.46b12135.js.map": "/booking-kculturepass-pub/static/js/main.46b12135.js.map",
+    "787.7d27ff54.chunk.js.map": "/booking-kculturepass-pub/static/js/787.7d27ff54.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.68e1dbd1.css",
+    "static/js/main.46b12135.js"
+  ]
+}
