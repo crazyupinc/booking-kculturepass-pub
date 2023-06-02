@@ -1,4 +1,5 @@
 import { FunctionComponent, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./added-cart-popup.module.css";
 
 type AddedCartPopupType = {
@@ -6,9 +7,11 @@ type AddedCartPopupType = {
 };
 
 const AddedCartPopup: FunctionComponent<AddedCartPopupType> = ({ onClose }) => {
+  const navigate = useNavigate();
+
   const onText1Click = useCallback(() => {
-    // Please sync "cart-added" to the project
-  }, []);
+    navigate("/cart");
+  }, [navigate]);
 
   return (
     <div className={styles.addedCartPopup}>

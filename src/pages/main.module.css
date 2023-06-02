@@ -51,6 +51,7 @@
 }
 .intro {
   line-height: 22px;
+  cursor: pointer;
 }
 .customerService:hover,
 .intro:hover,
@@ -190,6 +191,7 @@
   width: 146.3px;
   justify-content: center;
   gap: var(--gap-8xs);
+  cursor: pointer;
 }
 .navigationMenu {
   flex: 1;
@@ -272,27 +274,34 @@
   position: absolute;
   top: 11px;
   left: 49.23px;
+  font-size: var(--font-size-sm);
   line-height: 22px;
   font-weight: 500;
+  font-family: var(--font-noto-sans-kr);
+  color: var(--text-black);
+  text-align: center;
   width: 51.74px;
   height: 19px;
 }
 .button2 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: var(--main-yellow);
   position: relative;
   border-radius: var(--br-11xs);
-  background-color: var(--main-yellow);
   width: 150px;
   height: 42px;
-  font-size: var(--font-size-sm);
-  color: var(--text-black);
+}
+.button2:hover,
+.label:hover {
+  background-color: var(--color-greenyellow-100);
 }
 .hero {
   align-self: stretch;
-  height: 619px;
   display: flex;
   flex-direction: column;
   padding: 186px var(--padding-0);
-  box-sizing: border-box;
   align-items: center;
   justify-content: center;
   gap: var(--gap-xs);
@@ -305,7 +314,11 @@
 }
 .festival {
   position: relative;
+  font-size: var(--font-size-xs);
   line-height: 12px;
+  font-family: var(--font-noto-sans-kr);
+  color: var(--text-black);
+  text-align: center;
 }
 .arrowRightIcon {
   position: relative;
@@ -320,18 +333,16 @@
   flex-direction: row;
 }
 .label {
-  border-radius: 20px;
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-11xs) var(--padding-xs);
   background-color: var(--main-yellow);
+  border-radius: var(--br-xl);
   height: 27px;
-  padding: 2px 12px;
   box-sizing: border-box;
   align-items: center;
   justify-content: center;
   gap: var(--gap-3xs);
-  cursor: pointer;
-  text-align: center;
-  font-size: var(--font-size-xs);
-  color: var(--text-black);
 }
 .title1 {
   align-self: stretch;
@@ -378,95 +389,99 @@
   padding: var(--padding-12xl);
   align-items: center;
 }
+.image9Icon {
+  position: relative;
+  width: 260px;
+  height: 200px;
+  object-fit: cover;
+}
+.placeDate,
+.placeDate1 {
+  position: relative;
+  line-height: 24px;
+}
+.placeDate {
+  font-size: var(--font-size-xl);
+  font-weight: 900;
+}
+.placeDate1 {
+  align-self: stretch;
+}
+.product11,
+.ticketInfo {
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.ticketInfo {
+  align-self: stretch;
+  padding: var(--padding-lg) var(--padding-0);
+  align-items: center;
+  gap: var(--gap-8xs);
+}
+.product11 {
+  border: 1px solid var(--light-grey);
+  box-sizing: border-box;
+  width: 262px;
+  align-items: flex-start;
+  cursor: pointer;
+}
+.product11:hover,
+.product12:hover {
+  scale: 1.1;
+}
+.placeDate3 {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--font-size-xl);
+  line-height: 24px;
+  font-weight: 900;
+}
+.product12,
+.ticketInfo1 {
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.ticketInfo1 {
+  align-self: stretch;
+  padding: var(--padding-lg) var(--padding-mini);
+  gap: var(--gap-8xs);
+}
+.product12 {
+  border: 1px solid var(--light-grey);
+  box-sizing: border-box;
+  width: 262.25px;
+  cursor: pointer;
+}
+.product1Parent,
+.product1Wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.product1Wrapper {
+  width: 260px;
+  justify-content: flex-start;
+}
+.product1Parent {
+  flex: 1;
+  justify-content: center;
+  gap: var(--gap-14xl);
+}
 .image6Icon {
   position: relative;
   width: 260px;
   height: 200px;
   object-fit: cover;
 }
-.placeDate {
-  font-size: var(--font-size-xl);
-  font-weight: 900;
-}
-.placeDate,
-.placeDate1 {
-  align-self: stretch;
-  position: relative;
-  line-height: 24px;
-}
-.ticketInfo {
-  align-self: stretch;
-  background-color: var(--color-white);
-  flex-direction: column;
-  padding: var(--padding-lg) var(--padding-mini);
-  align-items: flex-start;
-  gap: var(--gap-8xs);
-}
-.product11,
-.product1Wrapper,
-.ticketInfo {
-  display: flex;
-  justify-content: flex-start;
-}
-.product11 {
-  background-color: var(--color-white);
-  border: 1px solid var(--light-grey);
-  box-sizing: border-box;
-  width: 262.25px;
-  flex-direction: column;
-  align-items: flex-start;
-  cursor: pointer;
-}
-.product11:hover {
-  scale: 1.1;
-}
-.product1Wrapper {
-  width: 260.25px;
-  flex-direction: row;
-  align-items: center;
-}
-.image7Icon {
-  position: relative;
-  width: 260px;
-  height: 200px;
-  object-fit: cover;
-}
-.frameParent {
-  width: 553.5px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: var(--gap-14xl);
-}
-.placeDate6 {
-  position: relative;
-  font-size: var(--font-size-xl);
-  line-height: 24px;
-  font-weight: 900;
-}
-.ticketInfo2 {
-  align-self: stretch;
-  background-color: var(--color-white);
-  display: flex;
-  flex-direction: column;
-  padding: var(--padding-lg) var(--padding-0);
-  align-items: center;
-  justify-content: flex-start;
-  gap: var(--gap-8xs);
-}
-.product1Frame,
-.productList {
-  display: flex;
-  flex-direction: row;
-}
-.product1Frame {
-  flex: 1;
-  align-items: center;
-  justify-content: flex-start;
-}
 .productList {
   align-self: stretch;
+  display: flex;
+  flex-direction: row;
   align-items: flex-start;
   justify-content: center;
   gap: var(--gap-14xl);
@@ -491,14 +506,6 @@
   text-align: left;
   font-size: var(--font-size-11xl);
   color: var(--color-black);
-}
-.leftIcon {
-  position: relative;
-  width: 14.3px;
-  height: 40px;
-  overflow: hidden;
-  flex-shrink: 0;
-  display: none;
 }
 .allProduct,
 .seeAllProduct {
@@ -532,16 +539,20 @@
   display: none;
   font-size: var(--font-size-sm);
 }
-.title2 {
-  height: 175px;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: var(--gap-2xs);
-}
 .festival1,
 .title2,
 .titleSection {
   display: flex;
+  justify-content: center;
+}
+.title2 {
+  height: 175px;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 11px;
+}
+.festival1,
+.titleSection {
   align-items: center;
 }
 .titleSection {
@@ -551,16 +562,14 @@
   border: 1px solid var(--light-grey);
   box-sizing: border-box;
   height: 300px;
-  flex-direction: row;
+  flex-direction: column;
   padding: 17px var(--padding-lg);
-  justify-content: space-between;
 }
 .festival1 {
   position: absolute;
   top: 2px;
   left: 12px;
   line-height: 12px;
-  justify-content: center;
   width: 44.37px;
   height: 17px;
 }
@@ -631,6 +640,7 @@
   cursor: pointer;
 }
 .product11:hover,
+.product12:hover,
 .product15:hover {
   border: 2px solid var(--main-blue);
   box-sizing: border-box;
@@ -645,19 +655,25 @@
   object-fit: cover;
 }
 .product1Group,
-.productList1 {
+.productList1,
+.productList2 {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: var(--gap-14xl);
 }
 .product1Group {
   flex: 1;
   justify-content: flex-start;
+  gap: var(--gap-14xl);
 }
-.productList1 {
+.productList1,
+.productList2 {
   align-self: stretch;
   justify-content: center;
+  gap: var(--gap-13xl);
+}
+.productList2 {
+  gap: var(--gap-14xl);
 }
 .productListChild {
   flex: 1;
@@ -866,7 +882,7 @@
 }
 .main {
   position: relative;
-  background-color: #f7f7f7;
+  background-color: var(--bg-grey);
   width: 100%;
   padding: var(--padding-11xl) var(--padding-0) var(--padding-0);
   box-sizing: border-box;
@@ -888,6 +904,10 @@
     padding-right: var(--padding-41xl);
     box-sizing: border-box;
   }
+  .product1Parent {
+    flex: unset;
+    align-self: stretch;
+  }
   .productList {
     align-self: stretch;
     width: auto;
@@ -902,7 +922,8 @@
     flex: unset;
     align-self: stretch;
   }
-  .productList1 {
+  .productList1,
+  .productList2 {
     align-self: stretch;
     width: auto;
     flex-direction: column;
@@ -1014,13 +1035,11 @@
     font-family: var(--font-noto-sans-kr);
     font-size: var(--font-size-base);
   }
-  .frameParent,
-  .product1Frame,
+  .product1Parent,
   .product1Wrapper {
     flex-direction: column;
   }
-  .product15,
-  .product1Frame {
+  .product15 {
     flex: unset;
     align-self: stretch;
   }
@@ -1030,6 +1049,9 @@
   }
 }
 @media screen and (max-width: 500px) {
+  .seeAllProduct {
+    font-size: var(--font-size-xl);
+  }
   .footerLinks {
     align-items: flex-start;
     justify-content: flex-start;

@@ -22,7 +22,7 @@
 }
 .addedCartPopup {
   position: relative;
-  border-radius: 37px;
+  border-radius: var(--br-18xl);
   background-color: var(--color-white);
   border: 1px solid var(--main-yellow);
   box-sizing: border-box;

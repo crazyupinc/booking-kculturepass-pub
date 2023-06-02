@@ -9,7 +9,11 @@
   z-index: 0;
 }
 .kCulturePass {
+  font-size: var(--font-size-3xl);
   line-height: 31.02px;
+  font-family: var(--font-rozha-one);
+  color: var(--color-black);
+  text-align: left;
   display: flex;
   align-items: center;
   width: 146px;
@@ -22,6 +26,10 @@
   position: relative;
 }
 .logo {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
   width: 219px;
   height: 105px;
   display: flex;
@@ -50,6 +58,7 @@
 .product {
   position: relative;
   line-height: 22px;
+  color: var(--main-blue);
   text-align: center;
   display: flex;
   align-items: center;
@@ -57,6 +66,7 @@
   width: 51.73px;
   height: 19px;
   flex-shrink: 0;
+  cursor: pointer;
 }
 .mission {
   width: 25.96px;
@@ -169,15 +179,13 @@
   width: 146.3px;
   justify-content: center;
   gap: var(--gap-8xs);
+  cursor: pointer;
 }
 .navigationMenu {
   flex: 1;
   height: 38px;
   justify-content: flex-end;
   gap: var(--gap-lg);
-  font-size: var(--font-size-sm);
-  color: var(--text-black);
-  font-family: var(--font-noto-sans-kr);
 }
 .hambugerMenuIcon {
   position: relative;
@@ -201,9 +209,9 @@
   gap: var(--gap-11xl);
   cursor: default;
   text-align: left;
-  font-size: var(--font-size-3xl);
-  color: var(--color-black);
-  font-family: var(--font-rozha-one);
+  font-size: var(--font-size-sm);
+  color: var(--text-black);
+  font-family: var(--font-noto-sans-kr);
 }
 .naviDiv {
   flex-direction: column;
@@ -249,23 +257,13 @@
   left: 0;
   height: 111px;
 }
-.icon,
 .linkHome {
-  position: relative;
-}
-.linkHome {
-  line-height: 12px;
   font-family: var(--font-open-sans);
   cursor: pointer;
 }
-.icon {
-  width: 12px;
-  height: 12px;
-  overflow: hidden;
-  flex-shrink: 0;
-}
 .introduction,
-.introduction1 {
+.introduction1,
+.linkHome {
   position: relative;
   line-height: 12px;
 }
@@ -287,6 +285,7 @@
   box-sizing: border-box;
   align-items: flex-start;
   justify-content: flex-start;
+  gap: var(--gap-3xs);
   font-size: var(--font-size-xs);
   color: var(--light-grey);
 }
@@ -386,7 +385,8 @@
   width: 189px;
 }
 .productList1,
-.ticketInfo2 {
+.ticketInfo2,
+.titleSectionParent {
   align-self: stretch;
   display: flex;
   justify-content: flex-start;
@@ -398,22 +398,17 @@
   align-items: center;
   gap: var(--gap-8xs);
 }
-.productList1 {
+.productList1,
+.titleSectionParent {
   flex-direction: row;
   align-items: flex-start;
   gap: var(--gap-14xl);
   font-size: var(--font-size-xl);
   color: var(--color-black);
 }
-.column,
 .titleSectionParent {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-.titleSectionParent {
-  align-self: stretch;
   background-color: var(--white-grey);
+  flex-direction: column;
   padding: var(--padding-11xl) var(--padding-131xl);
   align-items: center;
   gap: var(--gap-xl);
@@ -421,9 +416,30 @@
   font-size: var(--font-size-6xl);
   color: var(--text-black);
 }
+.kCulturePass1,
+.logo1 {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.kCulturePass1 {
+  line-height: 31.02px;
+  width: 146px;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.logo1 {
+  width: 219px;
+  height: 105px;
+  flex-direction: row;
+  justify-content: center;
+}
 .column {
   flex: 1;
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-start;
 }
 .link,
 .link1,

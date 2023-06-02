@@ -1,11 +1,21 @@
 import { FunctionComponent, useState, useCallback } from "react";
-import AddedCartPopup from "../components/added-cart-popup";
+import LoginPopup from "../components/login-popup";
 import PortalPopup from "../components/portal-popup";
+import AddedCartPopup from "../components/added-cart-popup";
 import { useNavigate } from "react-router-dom";
 import styles from "./event-detail.module.css";
 const EventDetail: FunctionComponent = () => {
+  const [isLoginPopupOpen, setLoginPopupOpen] = useState(false);
   const [isAddedCartPopupOpen, setAddedCartPopupOpen] = useState(false);
   const navigate = useNavigate();
+
+  const openLoginPopup = useCallback(() => {
+    setLoginPopupOpen(true);
+  }, []);
+
+  const closeLoginPopup = useCallback(() => {
+    setLoginPopupOpen(false);
+  }, []);
 
   const openAddedCartPopup = useCallback(() => {
     setAddedCartPopupOpen(true);
@@ -14,6 +24,14 @@ const EventDetail: FunctionComponent = () => {
   const closeAddedCartPopup = useCallback(() => {
     setAddedCartPopupOpen(false);
   }, []);
+
+  const onLogoClick = useCallback(() => {
+    navigate("/");
+  }, [navigate]);
+
+  const onProductClick = useCallback(() => {
+    navigate("/eventconcert");
+  }, [navigate]);
 
   const onLinkHomeClick = useCallback(() => {
     navigate("/eventconcert");
@@ -36,23 +54,25 @@ const EventDetail: FunctionComponent = () => {
       <div className={styles.eventDetail}>
         <nav className={styles.naviDiv}>
           <header className={styles.headerNavigation}>
-            <div className={styles.logo}>
+            <button className={styles.logo} onClick={onLogoClick}>
               <img
                 className={styles.logoBackgroundIcon}
                 alt=""
                 src="/logobackground@2x.png"
               />
               <div className={styles.kCulturePass}>K-Culture Pass</div>
-            </div>
+            </button>
             <div className={styles.navigationMenu}>
               <a className={styles.navigationLink}>
                 <h2 className={styles.intro}>About</h2>
-                <h2 className={styles.product}>Event</h2>
+                <h2 className={styles.product} onClick={onProductClick}>
+                  Event
+                </h2>
                 <h2 className={styles.mission}>미션</h2>
                 <h2 className={styles.map}>지도</h2>
                 <b className={styles.customerService}>고객센터</b>
               </a>
-              <div className={styles.memberSection}>
+              <div className={styles.memberSection} onClick={openLoginPopup}>
                 <button className={styles.button}>
                   <div className={styles.register}>Sign in</div>
                 </button>
@@ -81,8 +101,6 @@ const EventDetail: FunctionComponent = () => {
                 className={styles.linkHome}
                 onClick={onLinkHomeClick}
               >{`<  콘서트`}</button>
-              <img className={styles.icon} alt="" />
-              <img className={styles.icon} alt="" />
             </div>
           </div>
         </div>
@@ -91,9 +109,9 @@ const EventDetail: FunctionComponent = () => {
             <div className={styles.seeAllProduct}>SEVENTEEN</div>
             <div className={styles.divContentTop}>
               <img
-                className={styles.icon2}
+                className={styles.icon}
                 alt=""
-                src="/-20230601--1126-1@2x.png"
+                src="/-20230601--1126-11@2x.png"
               />
               <div className={styles.colRight}>
                 <div className={styles.title1}>
@@ -122,19 +140,13 @@ const EventDetail: FunctionComponent = () => {
                   </div>
                 </div>
                 <div className={styles.quantityParent}>
-                  <div className={styles.quantity}>
-                    <img
-                      className={styles.vectorIcon}
-                      alt=""
-                      src="/vector.svg"
-                    />
-                    <div className={styles.div1}>1</div>
-                    <img
-                      className={styles.vectorIcon1}
-                      alt=""
-                      src="/vector1.svg"
-                    />
-                  </div>
+                  <input
+                    className={styles.quantity}
+                    type="number"
+                    placeholder="1"
+                    min={1}
+                    max={4}
+                  />
                   <div className={styles.divrow2}>
                     <div className={styles.ticketName2}>7,5000 원</div>
                   </div>
@@ -169,13 +181,13 @@ const EventDetail: FunctionComponent = () => {
             <div className={styles.columns}>
               <div className={styles.columnParent}>
                 <div className={styles.column}>
-                  <div className={styles.logo}>
+                  <div className={styles.logo1}>
                     <img
                       className={styles.logoBackgroundIcon}
                       alt=""
                       src="/logobackground1@2x.png"
                     />
-                    <div className={styles.kCulturePass}>K-Culture Pass</div>
+                    <div className={styles.kCulturePass1}>K-Culture Pass</div>
                   </div>
                 </div>
                 <div className={styles.column1}>
@@ -226,6 +238,14 @@ const EventDetail: FunctionComponent = () => {
           </footer>
         </footer>
       </div>
+      {isLoginPopupOpen && (
+        <PortalPopup
+          overlayColor="rgba(113, 113, 113, 0.3)"
+          placement="Centered"
+        >
+          <LoginPopup onClose={closeLoginPopup} />
+        </PortalPopup>
+      )}
       {isAddedCartPopupOpen && (
         <PortalPopup
           overlayColor="rgba(113, 113, 113, 0.7)"

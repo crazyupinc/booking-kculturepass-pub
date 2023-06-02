@@ -28,10 +28,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
 }
 .intro {
   line-height: 22px;
+  cursor: pointer;
 }
 .customerService:hover,
 .intro:hover,
@@ -51,6 +51,7 @@
 .product {
   position: relative;
   line-height: 22px;
+  color: var(--main-blue);
   text-align: center;
   display: flex;
   align-items: center;
@@ -58,6 +59,7 @@
   width: 51.73px;
   height: 19px;
   flex-shrink: 0;
+  cursor: pointer;
 }
 .mission {
   width: 25.96px;
@@ -170,6 +172,7 @@
   width: 146.3px;
   justify-content: center;
   gap: var(--gap-8xs);
+  cursor: pointer;
 }
 .navigationMenu {
   flex: 1;
@@ -250,24 +253,16 @@
   left: 0;
   height: 111px;
 }
-.icon,
+.introduction,
 .linkHome {
   position: relative;
+  line-height: 12px;
 }
 .linkHome {
-  line-height: 12px;
   font-family: var(--font-open-sans);
   color: var(--main-yellow);
 }
-.icon {
-  width: 12px;
-  height: 12px;
-  overflow: hidden;
-  flex-shrink: 0;
-}
 .introduction {
-  position: relative;
-  line-height: 12px;
   cursor: pointer;
 }
 .menu {
@@ -282,6 +277,7 @@
   box-sizing: border-box;
   align-items: flex-start;
   justify-content: flex-start;
+  gap: var(--gap-3xs);
   font-size: var(--font-size-xs);
   color: var(--light-grey);
 }
@@ -304,21 +300,23 @@
   position: relative;
   line-height: 43.2px;
 }
-.image6Icon {
+.image9Icon {
   position: relative;
   width: 260px;
   height: 200px;
   object-fit: cover;
 }
+.placeDate,
+.placeDate1 {
+  position: relative;
+  line-height: 24px;
+}
 .placeDate {
   font-size: var(--font-size-xl);
   font-weight: 900;
 }
-.placeDate,
 .placeDate1 {
   align-self: stretch;
-  position: relative;
-  line-height: 24px;
 }
 .product1,
 .ticketInfo {
@@ -328,22 +326,19 @@
 .ticketInfo {
   align-self: stretch;
   display: flex;
-  padding: var(--padding-lg) var(--padding-mini);
-  align-items: flex-start;
+  padding: var(--padding-lg) var(--padding-0);
+  align-items: center;
   justify-content: flex-start;
   gap: var(--gap-8xs);
 }
 .product1 {
   border: 1px solid var(--light-grey);
   box-sizing: border-box;
-  width: 262.25px;
+  width: 262px;
   cursor: pointer;
 }
-.product1:hover,
-.product1Frame:hover,
-.product1Wrapper:hover {
-  border: 2px solid var(--main-blue);
-  box-sizing: border-box;
+.product1:hover {
+  scale: 1.1;
 }
 .product1,
 .product1Wrapper,
@@ -355,6 +350,13 @@
 }
 .product1Wrapper {
   flex-direction: row;
+  cursor: pointer;
+}
+.product11:hover,
+.product1:hover,
+.product1Wrapper:hover {
+  border: 2px solid var(--main-blue);
+  box-sizing: border-box;
 }
 .productList,
 .titleSection {
@@ -362,7 +364,7 @@
 }
 .productList {
   flex-direction: row;
-  font-size: var(--font-size-mid);
+  font-size: var(--font-size-base);
   color: var(--color-black);
 }
 .titleSection {
@@ -371,6 +373,7 @@
   gap: var(--gap-xl);
 }
 .placeDate3 {
+  align-self: stretch;
   position: relative;
   font-size: var(--font-size-xl);
   line-height: 24px;
@@ -379,58 +382,69 @@
 .ticketInfo1 {
   align-self: stretch;
   background-color: var(--color-white);
-  display: flex;
   flex-direction: column;
-  padding: var(--padding-lg) var(--padding-0);
-  align-items: center;
-  justify-content: flex-start;
+  padding: var(--padding-lg) var(--padding-mini);
+  align-items: flex-start;
   gap: var(--gap-8xs);
 }
-.product1Frame,
+.product11,
+.product1Container,
+.ticketInfo1 {
+  display: flex;
+  justify-content: flex-start;
+}
+.product11 {
+  background-color: var(--color-white);
+  border: 1px solid var(--light-grey);
+  box-sizing: border-box;
+  width: 262.25px;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: pointer;
+}
+.product11:hover {
+  scale: 1.1;
+}
+.product1Container {
+  width: 260px;
+  flex-direction: row;
+  align-items: center;
+}
+.image6Icon {
+  position: relative;
+  width: 260px;
+  height: 200px;
+  object-fit: cover;
+}
 .productList1 {
+  align-self: stretch;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-}
-.product1Frame {
-  cursor: pointer;
-}
-.productList1 {
-  align-self: stretch;
   gap: var(--gap-14xl);
-  font-size: var(--font-size-mid);
+  font-size: var(--font-size-base);
   color: var(--color-black);
 }
-.logo1,
+.column,
 .titleSectionParent {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 .titleSectionParent {
   align-self: stretch;
   background-color: var(--white-grey);
-  flex-direction: column;
   padding: var(--padding-11xl) var(--padding-131xl);
-  justify-content: flex-start;
+  align-items: center;
   gap: var(--gap-xl);
   text-align: center;
   font-size: var(--font-size-6xl);
   color: var(--text-black);
 }
-.logo1 {
-  width: 219px;
-  height: 105px;
-  flex-direction: row;
-  justify-content: center;
-  position: relative;
-}
 .column {
   flex: 1;
-  display: flex;
-  flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start;
 }
 .link,
 .link1,
@@ -697,7 +711,7 @@
     padding-right: var(--padding-5xs);
     box-sizing: border-box;
   }
-  .product1Frame,
+  .product1Container,
   .product1Wrapper {
     flex-direction: column;
   }
